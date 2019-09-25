@@ -17,7 +17,7 @@
 // margin, padding and sizes
 .outside{
     width: 100vw;
-    // max-width: 100%;
+    max-width: 100%;
 }
 
 .inside{
@@ -93,11 +93,39 @@ h5{
             line-height: 10vh;
             width: 100%;
             border: $brown 2px solid;
+            & > a{
+                color: white;
+                text-decoration: none;
+            }
         }
     }
     @include for-size(tablet-landscape-up){
         display: none;
     }
+}
+
+.mobile-menu {
+    position: fixed;
+    background: rgba($black, 0.8);
+    width: 100vw;
+    top: 20vh;
+    height: 80vh;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 500ms ease;
+    transform: translateY(100%);
+    li{
+        list-style-type: none;
+        text-transform: uppercase;
+        padding: 10px;
+        text-align: center;
+    }
+  }
+
+  .open {
+    transform: translateY(0);
 }
 
 // hero-section

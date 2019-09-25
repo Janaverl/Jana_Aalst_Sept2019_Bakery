@@ -61,7 +61,8 @@ h5 {
   justify-content: space-between; }
 
 .outside {
-  width: 100vw; }
+  width: 100vw;
+  max-width: 100%; }
 
 .inside {
   width: 80vw;
@@ -135,9 +136,47 @@ h5 {
       line-height: 10vh;
       width: 100%;
       border: #a47d5e 2px solid; }
+      .navmobile > div > p > a {
+        color: white;
+        text-decoration: none; }
   @media (min-width: 900px) {
     .navmobile {
       display: none; } }
+
+.mobile-menu {
+  position: fixed;
+  background: rgba(32, 32, 32, 0.8);
+  width: 100vw;
+  top: 20vh;
+  height: 80vh;
+  color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  -o-transition: transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%); }
+  .mobile-menu li {
+    list-style-type: none;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center; }
+
+.open {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0); }
 
 .hero {
   min-height: 100vh;
