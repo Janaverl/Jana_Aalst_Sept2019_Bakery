@@ -1,0 +1,66 @@
+// fonts
+$generalFont: 'Alegreya', serif;
+$logoFont: 'Mansalva', cursive;
+$quoteFont: 'Mansalva', cursive;
+
+@font-face {
+    font-family: 'ornament';
+    src: url('../fonts/bergamot_ornaments-webfont.woff2') format('woff2'), url('..fonts/bergamot_ornaments-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+// colors
+$white: #F2F2F2;
+$black: #202020;
+$blackOppac: rgba(#202020, 0.6);
+$brown: #a47d5e;
+$lightbrown: #c0a48f;
+
+// set general fonts&colors
+
+body{
+    font-family: $generalFont;
+    color: $black;
+}
+
+h1{
+    font-size: 80px;
+}
+
+h2{
+    font-size: 45px;
+}
+
+h3{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: $brown;
+}
+
+h5{
+    font-size: 20px;
+}
+
+.ornament {
+    font-family: 'ornament';
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+  }
+  
+
+.logo{
+    font-family: $logoFont;
+    font-size: 30px;
+}
+
+.white{
+    color: $white;
+    text-shadow: 1px 2px 10px $black;
+}
+
+.bigger{
+    font-weight: bold;
+    font-size: 18px;
+}
