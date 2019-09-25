@@ -57,7 +57,7 @@ h5{
 }
 
 .fifty{
-        @include width(50%);
+    @include width(50%);
 }
 
 .sixty{
@@ -227,10 +227,18 @@ nav{
 // tasty-section
 
 .time{
-    min-height: 200px;
-    width: 200px;
     background-color: rgba(white, 0.5); 
-    margin-bottom: 1px;
+    height: 100px;
+    width: 100px;
+    @include for-size(tablet-portrait-up){
+        height: 150px;
+        width: 150px;
+    }
+    @include for-size(tablet-landscape-up){
+        margin-bottom: 1px;
+        min-height: 200px;
+        width: 200px;
+    }
     @include centerWithFlex();
     justify-content: center;
     p{
@@ -269,7 +277,18 @@ nav{
                 padding: 40px;
             }
             .threeimgs{
-                width: 70%;
+                flex-direction: column;
+                align-content: space-between;
+                img{
+                    margin: 20px 0;
+                }
+                @include for-size(tablet-landscape-up){
+                    width: 70%;
+                    flex-direction: row;
+                    img{
+                        margin: 20px;
+                    }
+                }
                 margin: 0 auto;
                 margin-bottom: 40px;
                 justify-content: space-between;
@@ -421,25 +440,58 @@ nav{
 // sandwich
 
 .sandwich{
+    // display: flex;
     background-color: beige;
     .left{
+        // order: 2;
         @include centerWithFlex();
     }
     .right{
+        // order: 1;
         & > div{
-            width: 90%;
-            margin-left: auto;
+            text-align: center;
+            h2{
+                padding-top: 50px;
+            }
+            @include for-size(tablet-landscape-up){
+                width: 90%;
+                margin-left: auto;
+                text-align: initial;
+            }
         }
         .imgSandwich{
-            @include  backgroundImg(url(../img/Ebene_11.png));
-            border: white 10px solid;
+            img{
+                // height: 100%;
+                width: 80%;
+                overflow: hidden;
+                border: white 10px solid;
+                margin: calc(10% - 10px);
+                @include for-size(tablet-landscape-up){
+                    display: none;
+                }
+            }
+            // border: white 10px solid;
             height: 70%;
+            @include for-size(tablet-landscape-up){
+                border: white 10px solid;
+                @include  backgroundImg(url(../img/Ebene_11.png));
+            }
             .readyCook{
-                @include centerWithFlex();
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                @include for-size(tablet-landscape-up){
+                    // @include  backgroundImg(url(../img/Ebene_11.png));
+                    @include centerWithFlex();
+                    width: initial;
+                }
             }
         }
     }
 }
+
+// footer
 
 .footer{
     background-color: beige;

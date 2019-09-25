@@ -233,10 +233,9 @@ nav {
     overflow: hidden; }
 
 .time {
-  min-height: 200px;
-  width: 200px;
   background-color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 1px;
+  height: 100px;
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,6 +248,15 @@ nav {
   justify-content: center;
   text-align: center;
   justify-content: center; }
+  @media (min-width: 600px) {
+    .time {
+      height: 150px;
+      width: 150px; } }
+  @media (min-width: 900px) {
+    .time {
+      margin-bottom: 1px;
+      min-height: 200px;
+      width: 200px; } }
   .time p {
     margin: 0;
     font-weight: bold; }
@@ -288,12 +296,28 @@ nav {
       text-align: center;
       padding: 40px; }
     .tasty .inside > div > #gridtext .threeimgs {
-      width: 70%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-line-pack: justify;
+      align-content: space-between;
       margin: 0 auto;
       margin-bottom: 40px;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between; }
+      .tasty .inside > div > #gridtext .threeimgs img {
+        margin: 20px 0; }
+      @media (min-width: 900px) {
+        .tasty .inside > div > #gridtext .threeimgs {
+          width: 70%;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row; }
+          .tasty .inside > div > #gridtext .threeimgs img {
+            margin: 20px; } }
   .tasty .inside > div > #gridimg {
     background-image: url(../img/pancakes.jpg);
     background-size: cover;
@@ -447,25 +471,54 @@ nav {
     justify-content: center;
     text-align: center; }
   .sandwich .right > div {
-    width: 90%;
-    margin-left: auto; }
+    text-align: center; }
+    .sandwich .right > div h2 {
+      padding-top: 50px; }
+    @media (min-width: 900px) {
+      .sandwich .right > div {
+        width: 90%;
+        margin-left: auto;
+        text-align: initial; } }
   .sandwich .right .imgSandwich {
-    background-image: url(../img/Ebene_11.png);
-    background-size: cover;
-    border: white 10px solid;
     height: 70%; }
+    .sandwich .right .imgSandwich img {
+      width: 80%;
+      overflow: hidden;
+      border: white 10px solid;
+      margin: calc(10% - 10px); }
+      @media (min-width: 900px) {
+        .sandwich .right .imgSandwich img {
+          display: none; } }
+    @media (min-width: 900px) {
+      .sandwich .right .imgSandwich {
+        border: white 10px solid;
+        background-image: url(../img/Ebene_11.png);
+        background-size: cover; } }
     .sandwich .right .imgSandwich .readyCook {
+      width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      text-align: center; }
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      @media (min-width: 900px) {
+        .sandwich .right .imgSandwich .readyCook {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          text-align: center;
+          width: initial; } }
 
 .footer {
   background-color: beige;
