@@ -1,3 +1,5 @@
+@import "_myMixins.scss";
+
 // fonts
 $generalFont: 'Alegreya', serif;
 $logoFont: 'Mansalva', cursive;
@@ -25,7 +27,10 @@ body{
 }
 
 h1{
-    font-size: 80px;
+    font-size: 45px;
+    @include for-size(tablet-landscape-up){
+        font-size: 80px;   
+    }
 }
 
 h2{
