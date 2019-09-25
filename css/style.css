@@ -459,6 +459,9 @@ nav {
 .sandwich {
   background-color: beige; }
   .sandwich .left {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -470,55 +473,76 @@ nav {
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center; }
-  .sandwich .right > div {
-    text-align: center; }
-    .sandwich .right > div h2 {
-      padding-top: 50px; }
-    @media (min-width: 900px) {
-      .sandwich .right > div {
-        width: 90%;
-        margin-left: auto;
-        text-align: initial; } }
-  .sandwich .right .imgSandwich {
-    height: 70%; }
-    .sandwich .right .imgSandwich img {
-      width: 80%;
-      overflow: hidden;
-      border: white 10px solid;
-      margin: calc(10% - 10px); }
+  .sandwich .right {
+    margin: 0;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; }
+    .sandwich .right > div {
+      text-align: center; }
+      .sandwich .right > div h2 {
+        padding-top: 50px; }
       @media (min-width: 900px) {
-        .sandwich .right .imgSandwich img {
-          display: none; } }
-    @media (min-width: 900px) {
-      .sandwich .right .imgSandwich {
+        .sandwich .right > div {
+          width: 90%;
+          margin-left: auto;
+          text-align: initial; } }
+    .sandwich .right .imgSandwich {
+      height: 70%; }
+      @media (min-width: 900px) {
+        .sandwich .right .imgSandwich {
+          border: white 10px solid;
+          background-image: url(../img/Ebene_11.png);
+          background-size: cover; } }
+      .sandwich .right .imgSandwich img {
+        width: 80%;
+        height: auto;
+        overflow: hidden;
         border: white 10px solid;
-        background-image: url(../img/Ebene_11.png);
-        background-size: cover; } }
-    .sandwich .right .imgSandwich .readyCook {
-      width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -ms-flex-pack: distribute;
-      justify-content: space-around; }
+        margin: calc(10% - 10px); }
+        @media (min-width: 900px) {
+          .sandwich .right .imgSandwich img {
+            display: none; } }
+      .sandwich .right .imgSandwich .button .btn {
+        border: #202020 1px dotted;
+        width: 200px;
+        margin-bottom: 50px; }
       @media (min-width: 900px) {
-        .sandwich .right .imgSandwich .readyCook {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          text-align: center;
-          width: initial; } }
+        .sandwich .right .imgSandwich .button {
+          height: 100%;
+          position: relative; }
+          .sandwich .right .imgSandwich .button .btn {
+            border: #202020 1px dotted;
+            width: 200px;
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            margin-bottom: 0; } }
+      .sandwich .right .imgSandwich .readyCook {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; }
+        @media (min-width: 900px) {
+          .sandwich .right .imgSandwich .readyCook {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            width: initial; } }
 
 .footer {
   background-color: beige;

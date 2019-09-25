@@ -443,11 +443,12 @@ nav{
     // display: flex;
     background-color: beige;
     .left{
-        // order: 2;
+        order: 1;
         @include centerWithFlex();
     }
     .right{
-        // order: 1;
+        margin: 0;
+        order: 2;
         & > div{
             text-align: center;
             h2{
@@ -460,9 +461,15 @@ nav{
             }
         }
         .imgSandwich{
+            height: 70%;
+            @include for-size(tablet-landscape-up){
+                border: white 10px solid;
+                @include  backgroundImg(url(../img/Ebene_11.png));
+            }
             img{
                 // height: 100%;
                 width: 80%;
+                height: auto;
                 overflow: hidden;
                 border: white 10px solid;
                 margin: calc(10% - 10px);
@@ -470,11 +477,24 @@ nav{
                     display: none;
                 }
             }
-            // border: white 10px solid;
-            height: 70%;
-            @include for-size(tablet-landscape-up){
-                border: white 10px solid;
-                @include  backgroundImg(url(../img/Ebene_11.png));
+            .button{
+                .btn{
+                    border: $black 1px dotted;
+                    width: 200px;
+                    margin-bottom: 50px;
+                }
+                @include for-size(tablet-landscape-up){
+                    height: 100%;
+                    position: relative;
+                    .btn{
+                        border: $black 1px dotted;
+                        width: 200px;
+                        position: absolute;
+                        bottom: -20px;
+                        left: -20px;
+                        margin-bottom: 0;
+                    }
+                }
             }
             .readyCook{
                 width: 100%;
@@ -482,7 +502,6 @@ nav{
                 flex-direction: row;
                 justify-content: space-around;
                 @include for-size(tablet-landscape-up){
-                    // @include  backgroundImg(url(../img/Ebene_11.png));
                     @include centerWithFlex();
                     width: initial;
                 }
@@ -499,9 +518,6 @@ nav{
         border-top: black solid 1px;
         border-bottom: black solid 1px;
         padding: 0 40px;
-        // & > li{
-        //     padding: 1.5vw;
-        // }
     }
     padding: 40px 0;
 }
