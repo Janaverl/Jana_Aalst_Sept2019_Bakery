@@ -220,6 +220,40 @@ nav {
     width: 100%;
     overflow: hidden; }
 
+.time {
+  min-height: 200px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: center; }
+  .time p {
+    margin: 0;
+    font-weight: bold; }
+  .time p:nth-of-type(1) {
+    text-transform: uppercase;
+    color: #a47d5e; }
+  .time p:nth-of-type(2) {
+    text-transform: uppercase;
+    font-size: 60px; }
+
+.ready {
+  background-color: white;
+  background-image: url(../img/Vektor-Smartobjekt.png);
+  background-size: cover; }
+  .ready p:nth-of-type(2) {
+    color: rgba(164, 125, 94, 0.5); }
+
 .tasty {
   background-image: url(../img/background-image-2.png);
   background-size: cover; }
@@ -297,16 +331,6 @@ nav {
           text-align: center;
           justify-content: center;
           height: 100%; }
-          .tasty .inside > div > #gridready > div p {
-            margin: 0;
-            font-weight: bold; }
-          .tasty .inside > div > #gridready > div p:nth-of-type(1) {
-            color: #a47d5e;
-            text-transform: uppercase; }
-          .tasty .inside > div > #gridready > div p:nth-of-type(2) {
-            color: rgba(164, 125, 94, 0.5);
-            text-transform: uppercase;
-            font-size: 60px; }
       .tasty .inside > div > #gridimg {
         -ms-grid-row: 2;
         -ms-grid-row-span: 2;
@@ -416,6 +440,7 @@ nav {
   .sandwich .right .imgSandwich {
     background-image: url(../img/Ebene_11.png);
     background-size: cover;
+    border: white 10px solid;
     height: 70%; }
     .sandwich .right .imgSandwich .readyCook {
       display: -webkit-box;
@@ -429,11 +454,6 @@ nav {
       -ms-flex-pack: center;
       justify-content: center;
       text-align: center; }
-      .sandwich .right .imgSandwich .readyCook .time {
-        height: 200px;
-        width: 200px;
-        background-color: rgba(255, 255, 255, 0.5);
-        border: black 1px solid; }
 
 .footer {
   background-color: beige;
