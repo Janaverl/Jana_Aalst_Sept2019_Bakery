@@ -67,7 +67,12 @@ h5{
     @include width(80%);
 }
 
+.allmostAllTheContent{
+    z-index: 1;
+}
+
 .navmobile{
+    z-index: 2;
     display: block;
     position: fixed;
     width: 100vw;
@@ -215,7 +220,6 @@ nav{
     background-image: url(../img/tastes-so-good.png);
     background-repeat: no-repeat;
     background-position: center center;
-    z-index: 10;
   }
 
 
@@ -294,6 +298,18 @@ nav{
             @include backgroundImg(url(../img/pancakes.jpg));
             width: 100%;
             min-height: 20vh;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+            position: relative;
+            &:before {
+                z-index: 1;
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-width: 40px 0 0 40px;
+                border-style: solid;
+                border-color: $white transparent;
+            }
         }
         & > #gridready{
             display: none;
@@ -327,17 +343,6 @@ nav{
             & > #gridimg{
                 grid-row: 2 / 4;
                 grid-column: 1 / 2; 
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
-                position: relative;
-                &:before {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    border-width: 40px 0 0 40px;
-                    border-style: solid;
-                    border-color: $white transparent;
-                }
             }
             & > #gridEmpty{
                 height: 100%;
@@ -390,20 +395,20 @@ nav{
         & > .whitespace{
             background-color: $white;
             padding: 20px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-width: 40px 0 0 40px;
+                border-style: solid;
+                border-color: white transparent;
+            }
             @include for-size(tablet-landscape-up){
                 width: 70%;
                 margin-left: auto;
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
-                position: relative;
-                &:before {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    border-width: 40px 0 0 40px;
-                    border-style: solid;
-                    border-color: white transparent;
-                }
             }
             & > .border{
                 border: 1px $black dashed;

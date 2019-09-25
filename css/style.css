@@ -107,7 +107,11 @@ h5 {
     width: 80%;
     margin: 0 auto; } }
 
+.allmostAllTheContent {
+  z-index: 1; }
+
 .navmobile {
+  z-index: 2;
   display: block;
   position: fixed;
   width: 100vw;
@@ -249,8 +253,7 @@ nav {
   content: ' ' !important;
   background-image: url(../img/tastes-so-good.png);
   background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 10; }
+  background-position: center center; }
 
 .time {
   background-color: rgba(255, 255, 255, 0.5);
@@ -342,7 +345,19 @@ nav {
     background-image: url(../img/pancakes.jpg);
     background-size: cover;
     width: 100%;
-    min-height: 20vh; }
+    min-height: 20vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+    position: relative; }
+    .tasty .inside > div > #gridimg:before {
+      z-index: 1;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-width: 40px 0 0 40px;
+      border-style: solid;
+      border-color: #F2F2F2 transparent; }
   .tasty .inside > div > #gridready {
     display: none; }
   @media (min-width: 900px) {
@@ -393,18 +408,7 @@ nav {
         grid-row: 2 / 4;
         -ms-grid-column: 1;
         -ms-grid-column-span: 1;
-        grid-column: 1 / 2;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
-        position: relative; }
-        .tasty .inside > div > #gridimg:before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          border-width: 40px 0 0 40px;
-          border-style: solid;
-          border-color: #F2F2F2 transparent; }
+        grid-column: 1 / 2; }
       .tasty .inside > div > #gridEmpty {
         height: 100%;
         background-color: white;
@@ -441,22 +445,22 @@ nav {
       content: '$'; }
   .breakfast .right > .whitespace {
     background-color: #F2F2F2;
-    padding: 20px; }
+    padding: 20px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+    position: relative; }
+    .breakfast .right > .whitespace:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-width: 40px 0 0 40px;
+      border-style: solid;
+      border-color: white transparent; }
     @media (min-width: 900px) {
       .breakfast .right > .whitespace {
         width: 70%;
-        margin-left: auto;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px));
-        position: relative; }
-        .breakfast .right > .whitespace:before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          border-width: 40px 0 0 40px;
-          border-style: solid;
-          border-color: white transparent; } }
+        margin-left: auto; } }
     .breakfast .right > .whitespace > .border {
       border: 1px #202020 dashed; }
       .breakfast .right > .whitespace > .border > .estimated {
