@@ -466,10 +466,9 @@ nav {
       .breakfast .right > .whitespace > .border > .estimated {
         width: 80%;
         margin: 0 auto;
-        padding: 40px 0;
+        padding-top: 40px;
         -ms-flex-pack: distribute;
-        justify-content: space-around;
-        border-bottom: #202020 1px solid; }
+        justify-content: space-around; }
       .breakfast .right > .whitespace > .border > h2 {
         padding-top: 100px;
         padding-bottom: 40px; }
